@@ -14,7 +14,7 @@ describe DockingStation do
   end
   it 'knows when it is full' do
     expect do
-      20.times { subject.dock :bike }
+      DockingStation::DEFAULT_CAPACITY.times { subject.dock :bike }
     end.to change(subject, :full?).from(false).to(true)
   end
 end

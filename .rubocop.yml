@@ -1,2 +1,13 @@
+require: rubocop-rspec
+
 Documentation:
   Enabled: false
+
+Style/MethodDefParentheses:
+  Description: Checks if the method definitions have or don't have parentheses.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#method-parens
+  Enabled: true
+  EnforcedStyle: require_no_parentheses
+  SupportedStyles:
+  - require_parentheses
+  - require_no_parentheses

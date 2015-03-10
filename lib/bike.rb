@@ -3,7 +3,7 @@ class Bike
   alias_method :broken?, :broken
 
   def initialize
-    @broken = false
+    fix
   end
 
   def break

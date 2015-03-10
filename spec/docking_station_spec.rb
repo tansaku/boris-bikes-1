@@ -12,4 +12,9 @@ describe DockingStation do
       subject.release :bike
     end.to change(subject, :bike_count).from(1).to(0)
   end
+  it 'knows when it is full' do
+    expect do
+      20.times { subject.dock :bike }
+    end.to change(subject, :full?).from(false).to(true)
+  end
 end

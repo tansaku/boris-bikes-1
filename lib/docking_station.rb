@@ -14,4 +14,8 @@ class DockingStation
   def release bike
     @bikes.delete bike
   end
+
+  def full?
+    @bikes.length >= 20
+  end
 end
